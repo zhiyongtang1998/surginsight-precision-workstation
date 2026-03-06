@@ -28,7 +28,7 @@ jobs:
 
       - run: npm ci
       - name: Copy models to public/
-        run: rm -rf public/models && cp -r models public/models
+        run: mkdir -p public && cp -r models public/models
       - run: npm run build
         env:
           GITHUB_PAGES: "1"
